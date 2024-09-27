@@ -45,6 +45,13 @@ accordionTitles.forEach((accordionTitle) => {
         } else {
             accordionTitle.nextElementSibling.style.maxHeight = "0px";
         }
+    });
+});
 
+//* Animations
+
+document.querySelectorAll(".accordion-title").forEach((item) => {
+    item.addEventListener("click", function () {
+        this.parentNode.classList.toggle("active");
     });
 });

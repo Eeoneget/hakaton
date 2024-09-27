@@ -28,17 +28,21 @@
                 font-size: 1.5em;
 
                 margin-left: auto;
-            }
-        }
 
-        .active-header:after {
-            content: "-";
+                transition: 1s;
+            }
         }
 
         .accordion-answer {
             max-height: 0;
             overflow: hidden;
             transition: 1s ease max-height;
+        }
+
+        &.active {
+            .accordion-title:after {
+                transform: rotate(45deg);
+            }
         }
     }
 }

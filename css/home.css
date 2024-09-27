@@ -1010,14 +1010,15 @@ body {
   content: "+";
   font-size: 1.5em;
   margin-left: auto;
-}
-.accordion .accordion-item .active-header:after {
-  content: "-";
+  transition: 1s;
 }
 .accordion .accordion-item .accordion-answer {
   max-height: 0;
   overflow: hidden;
   transition: 1s ease max-height;
+}
+.accordion .accordion-item.active .accordion-title:after {
+  transform: rotate(45deg);
 }
 
 @media (max-width: 768px) {
