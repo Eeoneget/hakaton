@@ -1,0 +1,72 @@
+.our-vision {
+    margin-bottom: $margin-small;
+    &__title {
+        padding-bottom: $padding-xsmall;
+    }
+
+    .h3-title {
+        font-size: 2rem;
+    }
+}
+
+.about-phone {
+    display: none;
+}
+
+.about {
+    margin-bottom: $margin-small;
+    &_wrp {
+        @include flex-row();
+
+        .first-side {
+            max-width: 49%;
+            font-size: 1.8rem;
+            &__title {
+                @include font($clr-primary-white, $font-size-sl, 700);
+            }
+        }
+        .second-side {
+            max-width: 49%;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        display: none;
+    }
+
+    .about-phone {
+        display: block;
+        margin-bottom: $margin-regular;
+
+        img {
+            width: 95%;
+        }
+
+        .container {
+            .about-phone_wrp {
+                .first-side {
+                    max-width: 100%;
+                    font-size: $font-size-xm;
+                    margin-bottom: $margin-regular;
+                    &__title {
+                        @include font($clr-primary-white, $font-size-l, 700);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.our-values {
+    margin-bottom: $margin-regular;
+    &__title {
+        margin-bottom: $margin-small;
+    }
+}
+
+.development {
+    text-align: center;
+}

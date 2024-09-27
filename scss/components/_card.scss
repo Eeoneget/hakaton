@@ -1,0 +1,38 @@
+.cards {
+    @include flex-row();
+    gap: $gap-xxsmall;
+    .card {
+        height: 300px;
+
+        padding: 1rem;
+        border-radius: $radius-small;
+
+        text-align: center;
+        line-height: 2.7rem;
+        font-weight: 600;
+
+        font-size: 1.6rem;
+
+        background-color: $lcr-primary-gray-2;
+
+        &:hover i {
+            color: $clr-primary-white;
+        }
+        i {
+            color: $surface-300;
+            font-size: 4rem;
+            transition: $transition-fast;
+            padding-bottom: $padding-xxsmall;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .cards {
+        flex-direction: column;
+        .card {
+            font-size: 2rem;
+            height: auto;
+        }
+    }
+}

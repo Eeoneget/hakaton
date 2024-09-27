@@ -1,0 +1,39 @@
+.cta {
+    padding-bottom: $padding-smedium;
+
+    @include flex-column-center;
+    text-align: center;
+    &__title {
+        width: 50%;
+        @include font($clr-white, calc(3rem + 32 * (100vw / 1280)), 600);
+    }
+    &__subtext {
+        width: 25%;
+        color: $clr-primary-gray-3;
+        font-size: calc(1rem + 1rem + (100vw / 1280));
+        margin-bottom: $padding-xxsmall;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta {
+        &__subtext {
+            width: 50%;
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .cta {
+        &__title {
+            width: 60%;
+            font-size: 4rem;
+            margin-bottom: $margin-xsmall;
+        }
+        &__subtext {
+            width: 75%;
+            font-size: 2.8rem;
+        }
+    }
+}

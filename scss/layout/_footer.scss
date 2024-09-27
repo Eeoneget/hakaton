@@ -1,0 +1,28 @@
+.footer {
+    @include flex-column-center;
+    &__top {
+        .logos {
+            &__logo {
+                // @include btn(15px 15px, $radius-small, $lcr-primary-gray-2);
+                &_purple:hover i {
+                    color: #fd06af;
+                }
+
+                &_red:hover i {
+                    color: #ff0000;
+                }
+
+                &_black:hover i {
+                    color: black;
+                }
+
+                & i {
+                    color: $clr-primary-white;
+                    transition: $transition-fast;
+                    font-size: 30px;
+                    padding: 0 $padding-xsmall;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "../scss-utils/mixin";
+@import "../scss-utils/variables";
+
+.btn {
+    @include btn($padding-xxsmall, $padding-small, $radius-small, $clr-primary-white);
+    color: $clr-primary-black;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        border-radius: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn {
+        font-size: 2.7rem;
+    }
+}

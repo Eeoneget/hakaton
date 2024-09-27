@@ -1,0 +1,9 @@
+@import "../scss-utils/variables", "../scss-utils/mixin";
+
+.main {
+    margin-bottom: $margin-medium;
+    img {
+        border-radius: 2rem;
+        user-select: none;
+    }
+}

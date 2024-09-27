@@ -1,0 +1,69 @@
+@mixin respond-to($media) {
+    @if $media== "phone" {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+}
+
+@mixin click() {
+    position: relative;
+    top: 0.1rem;
+}
+
+@mixin flex-row($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-row-center() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-column($gap: 0) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin flex-column-center() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-align($align) {
+    display: flex;
+    align-items: $align;
+}
+
+@mixin title-h1() {
+    font-size: $font-size-xxl;
+    font-family: $first-family;
+    font-weight: 700;
+    line-height: 6.4rem;
+    color: $clr-primary-black;
+}
+
+@mixin title-h2() {
+    font-size: $font-size-xxm;
+    font-family: $first-family;
+    font-weight: 700;
+    line-height: 3.2rem;
+    color: $clr-primary-black;
+}
+
+@mixin font($color: $clr-white, $font-size: 1.6rem, $font-weight: 400) {
+    font-size: $font-size;
+    font-family: Inter;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+@mixin btn($first-padding: 0, $second-padding: 0, $border-radius: 0, $bgc) {
+    padding: $first-padding $second-padding;
+    border-radius: $border-radius;
+    background-color: $bgc;
+}

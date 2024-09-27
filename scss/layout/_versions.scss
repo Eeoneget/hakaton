@@ -1,0 +1,16 @@
+@import "../scss-utils/variables", "../scss-utils/mixin";
+
+.versions {
+    margin-bottom: $margin-regular;
+    &_wrp {
+        @include flex-column-center();
+        gap: $gap-regular;
+        .first-side,
+        .second-side {
+            img {
+                height: 500px;
+                width: 900px
+            }
+        }
+    }
+}
