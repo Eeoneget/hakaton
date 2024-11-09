@@ -2,7 +2,8 @@
     @include flex-row();
     gap: $gap-xxsmall;
     .card {
-        height: 300px;
+
+        min-height: 200px;
 
         padding: 1rem;
         border-radius: $radius-small;
@@ -31,6 +32,7 @@
     .cards {
         flex-direction: column;
         .card {
+            min-height: 0;
             font-size: 2rem;
             height: auto;
         }
